@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Contact Urvesh | Let's Build Something Accessible</title>
+  <meta name="description" content="Get in touch with Urvesh to collaborate on accessibility audits, semantic HTML refactoring, or high-contrast modern web interfaces.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="http://localhost:8000/contact.html">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact Urvesh | Web Accessibility Engineer">
+  <meta property="og:description" content="Reach out through this fully accessible, tab-navigable contact form to discuss your project.">
+  <meta property="og:url" content="http://localhost:8000/contact.html">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Keyboard Accessibility: Skip-to-content Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header & Navigation -->
+  <header class="site-header" role="banner">
+    <div class="container header-container">
+      <a href="index.html" class="logo" aria-label="Urvesh Portfolio Home">
+        Urvesh<span class="logo-dot" aria-hidden="true"></span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="contact.html" class="nav-link" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Navigation Menu -->
+      <details class="mobile-nav-details" aria-label="Mobile Navigation Menu">
+        <summary class="mobile-nav-summary" aria-haspopup="true">Menu</summary>
+        <ul class="mobile-nav-links">
+          <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+          <li><a href="about.html" class="mobile-nav-link">About</a></li>
+          <li><a href="projects.html" class="mobile-nav-link">Projects</a></li>
+          <li><a href="contact.html" class="mobile-nav-link" aria-current="page">Contact</a></li>
+        </ul>
+      </details>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main id="main-content" class="main-content container animate-fade-in" tabindex="-1">
+    
+    <!-- Contact Form Section -->
+    <section class="contact-container" aria-labelledby="contact-heading">
+      <h1 id="contact-heading">Get In Touch</h1>
+      <p style="margin-bottom: var(--spacing-md);">
+        Have a project that requires a strong focus on digital inclusion or need an accessibility compliance audit? 
+        Fill out the form below. All fields marked with an asterisk (<span class="required-star" aria-hidden="true">*</span>) 
+        are required.
+      </p>
+
+      <!-- Accessible Form -->
+      <form action="#" method="POST" autocomplete="on">
+        
+        <!-- Name Input Group -->
+        <div class="form-group">
+          <label for="contact-name" class="form-label">
+            Full Name <span class="required-star" aria-hidden="true">*</span>
+            <span class="sr-only">(required)</span>
+          </label>
+          <input 
+            type="text" 
+            id="contact-name" 
+            name="name" 
+            class="form-input" 
+            placeholder="e.g. Jane Doe" 
+            required 
+            aria-required="true"
+            autocomplete="name">
+          <span class="form-helper">Please enter your first and last name.</span>
+        </div>
+
+        <!-- Email Input Group -->
+        <div class="form-group">
+          <label for="contact-email" class="form-label">
+            Email Address <span class="required-star" aria-hidden="true">*</span>
+            <span class="sr-only">(required)</span>
+          </label>
+          <input 
+            type="email" 
+            id="contact-email" 
+            name="email" 
+            class="form-input" 
+            placeholder="e.g. jane.doe@example.com" 
+            required 
+            aria-required="true"
+            autocomplete="email">
+          <span class="form-helper">I will only use this to reply to your inquiry.</span>
+        </div>
+
+        <!-- Subject Select Group -->
+        <div class="form-group">
+          <label for="contact-subject" class="form-label">
+            Inquiry Subject <span class="required-star" aria-hidden="true">*</span>
+            <span class="sr-only">(required)</span>
+          </label>
+          <select 
+            id="contact-subject" 
+            name="subject" 
+            class="form-input" 
+            required 
+            aria-required="true"
+            style="appearance: none; background-image: url('data:image/svg+xml;utf8,<svg fill=\"%23f8fafc\" height=\"24\" viewBox=\"0 0 24 24\" width=\"24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M7 10l5 5 5-5z\"/></svg>'); background-repeat: no-repeat; background-position: right 1rem center;">
+            <option value="" disabled selected hidden>Select an option...</option>
+            <option value="accessibility-audit">Accessibility Compliance Audit</option>
+            <option value="ui-development">UI Design & Development</option>
+            <option value="general-consultation">General Consultation</option>
+            <option value="other">Other Inquiry</option>
+          </select>
+          <span class="form-helper">Choose the category that best matches your project.</span>
+        </div>
+
+        <!-- Message Textarea Group -->
+        <div class="form-group">
+          <label for="contact-message" class="form-label">
+            Your Message <span class="required-star" aria-hidden="true">*</span>
+            <span class="sr-only">(required)</span>
+          </label>
+          <textarea 
+            id="contact-message" 
+            name="message" 
+            class="form-input" 
+            rows="6" 
+            placeholder="Describe your project or questions here..." 
+            required 
+            aria-required="true"
+            minlength="20"></textarea>
+          <span class="form-helper">Please provide at least 20 characters detailing your request.</span>
+        </div>
+
+        <!-- Submit Button -->
+        <div style="margin-top: var(--spacing-md);">
+          <button type="submit" class="btn btn-primary" style="width: 100%;">
+            Send Message
+          </button>
+        </div>
+
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Visual/Screen Reader Helper Style -->
+  <style>
+    /* Visually hide elements for screen readers only */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+
+  <!-- Footer Landmark -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-container">
+      <p>&copy; 2026 Urvesh. Built with semantic HTML5 and CSS. All rights reserved.</p>
+      <nav aria-label="Social Links Menu">
+        <ul class="social-links">
+          <li><a href="https://github.com/urvesh" class="social-link" target="_blank" rel="noopener" aria-label="GitHub Profile (opens in new tab)">GitHub</a></li>
+          <li><a href="https://linkedin.com/in/urvesh" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn Profile (opens in new tab)">LinkedIn</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>

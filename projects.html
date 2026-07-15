@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Projects Portfolio | Urvesh | Accessibility & Web Engineering</title>
+  <meta name="description" content="Explore a gallery of projects built by Urvesh, showcasing accessible coding practices, WCAG AAA contrast, semantic templates, and mobile responsiveness.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="http://localhost:8000/projects.html">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Projects Portfolio | Urvesh">
+  <meta property="og:description" content="Interactive portfolio projects designed for maximum usability and strict accessibility compliance.">
+  <meta property="og:url" content="http://localhost:8000/projects.html">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Keyboard Accessibility: Skip-to-content Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header & Navigation -->
+  <header class="site-header" role="banner">
+    <div class="container header-container">
+      <a href="index.html" class="logo" aria-label="Urvesh Portfolio Home">
+        Urvesh<span class="logo-dot" aria-hidden="true"></span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="projects.html" class="nav-link" aria-current="page">Projects</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Navigation Menu -->
+      <details class="mobile-nav-details" aria-label="Mobile Navigation Menu">
+        <summary class="mobile-nav-summary" aria-haspopup="true">Menu</summary>
+        <ul class="mobile-nav-links">
+          <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+          <li><a href="about.html" class="mobile-nav-link">About</a></li>
+          <li><a href="projects.html" class="mobile-nav-link" aria-current="page">Projects</a></li>
+          <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+        </ul>
+      </details>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main id="main-content" class="main-content container animate-fade-in" tabindex="-1">
+    
+    <!-- Projects Section -->
+    <section aria-labelledby="projects-heading">
+      <h1 id="projects-heading">Selected Projects</h1>
+      <p>
+        A detailed collection of projects displaying clean architecture, semantic structures, 
+        and compliance. Everything is designed to be fully navigable by keyboard and screen readers.
+      </p>
+
+      <!-- CSS Grid of Project Cards -->
+      <div class="grid-portfolio">
+        
+        <!-- Project 1 -->
+        <article class="card">
+          <span class="card-tag">Accessibility Auditing</span>
+          <h2 class="card-title" id="proj-card-1" style="font-size: 1.4rem; margin-bottom: 0.5rem;">Inclusive Banking Portal</h2>
+          <p class="card-description">
+            Restructured interactive account summary and transfer interfaces for a large retail bank. Refined focus ring systems, 
+            optimized keyboard traps inside modal overlays, and integrated ARIA alert states for dynamic transaction messages.
+          </p>
+          <a href="#" class="card-link" aria-labelledby="proj-card-1">View case study</a>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="card">
+          <span class="card-tag">UI Design & Development</span>
+          <h2 class="card-title" id="proj-card-2" style="font-size: 1.4rem; margin-bottom: 0.5rem;">Glassmorphic Design System</h2>
+          <p class="card-description">
+            A developer-focused CSS framework using HSL variables to dynamically adjust contrast based on OS media preferences. 
+            Features fully compliant AAA color combinations, responsive focus outlines, and utility classes for typography.
+          </p>
+          <a href="#" class="card-link" aria-labelledby="proj-card-2">View repository</a>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="card">
+          <span class="card-tag">HTML5 / SEO Integration</span>
+          <h2 class="card-title" id="proj-card-3" style="font-size: 1.4rem; margin-bottom: 0.5rem;">Accessible E-Commerce Grid</h2>
+          <p class="card-description">
+            A fully tab-navigable store layout featuring screen-reader announcers for live filters and sort order updates. 
+            Adheres to strict product schema microdata structures for rapid indexing.
+          </p>
+          <a href="#" class="card-link" aria-labelledby="proj-card-3">Launch live site</a>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="card">
+          <span class="card-tag">Interactive Dev</span>
+          <h2 class="card-title" id="proj-card-4" style="font-size: 1.4rem; margin-bottom: 0.5rem;">Responsive Modal Utilities</h2>
+          <p class="card-description">
+            Developed a lightweight HTML and CSS-only modal design system utilizing CSS targets and checkbox states. Focus 
+            management was preserved and styled dynamically with custom focus rings.
+          </p>
+          <a href="#" class="card-link" aria-labelledby="proj-card-4">View code snippet</a>
+        </article>
+
+        <!-- Project 5 -->
+        <article class="card">
+          <span class="card-tag">Documentation</span>
+          <h2 class="card-title" id="proj-card-5" style="font-size: 1.4rem; margin-bottom: 0.5rem;">A11y Patterns Playbook</h2>
+          <p class="card-description">
+            An interactive web guide outlining standard ARIA widget implementations, describing proper keyboard layout expectations 
+            and landmark configuration for modern web applications.
+          </p>
+          <a href="#" class="card-link" aria-labelledby="proj-card-5">Read playbook</a>
+        </article>
+
+        <!-- Project 6 -->
+        <article class="card">
+          <span class="card-tag">Development Tools</span>
+          <h2 class="card-title" id="proj-card-6" style="font-size: 1.4rem; margin-bottom: 0.5rem;">Contrast Palette Generator</h2>
+          <p class="card-description">
+            A tool helping designers check and map coordinate HSL colors, verifying if they hit WCAG AA/AAA threshold standards. 
+            Output files are generated instantly as clean CSS theme configurations.
+          </p>
+          <a href="#" class="card-link" aria-labelledby="proj-card-6">Open generator</a>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Landmark -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-container">
+      <p>&copy; 2026 Urvesh. Built with semantic HTML5 and CSS. All rights reserved.</p>
+      <nav aria-label="Social Links Menu">
+        <ul class="social-links">
+          <li><a href="https://github.com/urvesh" class="social-link" target="_blank" rel="noopener" aria-label="GitHub Profile (opens in new tab)">GitHub</a></li>
+          <li><a href="https://linkedin.com/in/urvesh" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn Profile (opens in new tab)">LinkedIn</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
